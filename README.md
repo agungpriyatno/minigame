@@ -25,6 +25,29 @@ Rhythm game dengan beat detection di mana pemain harus:
 
 **Route**: `/hand-rhythm`
 
+### 3. Pose Pong (Saber Combat)
+
+Game Pong dengan tema cyberpunk/saber di mana tubuh Anda adalah pemukulnya:
+
+- 👤 **Body Tracking**: Menggunakan posisi kepala dan pergelangan tangan untuk memantulkan bola.
+- ⚡ **Smash Mechanic**: Lakukan 2 sentuhan berturut-turut untuk mengaktifkan Smash super cepat!
+- ⚔️ **Cyberpunk UI**: Visual bertema neon saber dengan efek particle dan glow.
+- 👥 **Local Multiplayer**: Mendukung pertarungan 1v1 secara lokal.
+
+**Route**: `/pose-pong`
+
+### 4. Hand Bubble Shooter
+
+Game bubble shooter klasik dengan twist kontrol hand gesture:
+
+- 🤏 **Pinch & Pull**: Jepit (pinch) jempol dan telunjuk lalu tarik untuk membidik dengan ketapel.
+- 🎯 **Trajectory System**: Prediksi jalur tembakan dengan garis bantu visual.
+- 🎨 **Gesture Color Change**: Hover tangan di atas palet warna untuk berganti bola.
+- 💥 **Match-3 & Gravity**: Pecahkan gelembung dan lihat sisa gelembung jatuh dengan efek fisika gravity.
+
+**Route**: `/hand-bubble-shooter`
+
+
 **Features**:
 
 - Beat detection otomatis dari audio file
@@ -102,15 +125,23 @@ npm start
 3. Gunakan tangan untuk slice orbs
 4. Hindari red killer orbs
 
-### Hand Rhythm
-
-1. Buka `/hand-rhythm`
-2. Izinkan akses webcam
-3. Upload file audio (.mp3 atau .wav)
-4. Tunggu beat detection selesai
-5. Klik "Start Game"
-6. Gunakan **index finger** dari satu atau kedua tangan untuk hit circles
 7. Hit circles tepat waktu untuk mendapat Perfect/Good/Bad scores
+
+### Pose Pong
+
+1. Buka `/pose-pong`
+2. Posisikan diri Anda di depan kamera hingga terdeteksi sebagai Warrior A/B.
+3. Gunakan **kepala** atau **pergelangan tangan** (wrists) untuk memantulkan bola plasma.
+4. Hit bola **dua kali berturut-turut** di area sendiri untuk melakukan **SMASH** ⚡.
+5. Lawan harus menangkis SMASH tersebut untuk menormalkan kembali kecepatan bola.
+
+### Hand Bubble Shooter
+
+1. Buka `/hand-bubble-shooter`
+2. Gunakan **telunjuk & jempol** untuk melakukan gerakan menjepit (pinch).
+3. **Jepit** di area ketapel, **Tarik ke bawah** untuk membidik, dan **Lepaskan** untuk menembak.
+4. Untuk mengganti warna, arahkan cursor tangan ke atas palet warna di bawah layar selama 0.5 detik.
+
 
 **Tips**:
 
@@ -156,10 +187,14 @@ minigame/
 │   ├── app/
 │   │   ├── page.tsx              # Landing page
 │   │   ├── hand-slicer/         # Hand Slicer game
-│   │   └── hand-rhythm/         # Hand Rhythm game
+│   │   ├── hand-rhythm/         # Hand Rhythm game
+│   │   ├── hand-bubble-shooter/ # Hand Bubble Shooter game
+│   │   └── pose-pong/           # Pose Pong game
 │   ├── components/
-│   │   └── HandRhythmGame.tsx   # Main rhythm game component
+│   │   ├── HandRhythmGame.tsx  # Rhythm game core
+│   │   └── PosePongGame.tsx    # Pose Pong engine
 │   ├── lib/
+
 │   │   ├── constants.ts         # Game configuration
 │   │   ├── gameEngine.ts        # Game logic & beat filtering
 │   │   ├── essentiaAnalyzer.ts  # Audio beat detection
@@ -188,6 +223,23 @@ minigame/
 - ✅ Hand gesture recognition
 - ✅ Object slicing mechanics
 - ✅ Avoid obstacles gameplay
+
+### Pose Pong (Saber Combat)
+
+- ✅ Full body tracking (Head & Wrists)
+- ✅ Cyberpunk neon aesthetics
+- ✅ Advanced Smash logic (Consecutive touch tracking)
+- ✅ Adaptive visual states (Charging, Smashed)
+- ✅ Multiplayer support
+
+### Hand Bubble Shooter
+
+- ✅ Pinch-and-pull slingshot mechanics
+- ✅ Color selection via hover gesture
+- ✅ Grid match-3 algorithm
+- ✅ Gravity physics for hanging bubbles
+- ✅ Background music and SFX integration
+
 
 ## 🐛 Troubleshooting
 
