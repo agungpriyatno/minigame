@@ -125,6 +125,38 @@ export default function Home() {
               </div>
             </div>
           </Link>
+
+          {/* Pose Pong Card */}
+          <Link href="/pose-pong" className="group relative block p-1">
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+            <div className="relative bg-black/80 border border-white/10 rounded-2xl p-8 hover:bg-black/60 transition-colors duration-300 flex items-center gap-8 overflow-hidden">
+              <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-orange-500/10 to-transparent"></div>
+
+              <div className="flex-1 text-left">
+                <h2 className="text-3xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
+                  POSE PONG
+                </h2>
+                <p className="text-gray-400">
+                  Use your hands & head as paddles to deflect the ball! Win 5 points.
+                </p>
+              </div>
+
+              <div className="w-16 h-16 rounded-full bg-orange-500/20 flex items-center justify-center border border-orange-500/50 group-hover:scale-110 transition-transform duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-orange-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <circle cx="6" cy="12" r="2" />
+                  <circle cx="18" cy="12" r="2" />
+                  <circle cx="12" cy="12" r="4" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
 
